@@ -112,4 +112,10 @@ window.onload = function() {
         box1.keyDrive(event.keyCode);
         console.log(event.keyCode)
     })
+    var tip = document.getElementById("tip")
+    tip.addEventListener("click", function(target) {
+        if (target.target.nodeName == "H5") {
+            oTxt.value = target.target.innerText.split("：")[0];
+        }
+    })
 };
