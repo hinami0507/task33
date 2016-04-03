@@ -8,12 +8,12 @@
 </head>
 
 <body>
-    <div class="tip">
+    <div id="tip">
         <h5>按方向键可以赛艇</h5>
-        <h5>GO:移动</h5>
-        <h5>TUN LEF:逆时针90</h5>
-        <h5>TUN RIG:顺时针90</h5>
-        <h5>TUN BAC:向后转</h5>
+        <h5>GO：移动</h5>
+        <h5>TUN LEF：逆时针90</h5>
+        <h5>TUN RIG：顺时针90</h5>
+        <h5>TUN BAC：向后转</h5>
     </div>
     <div id="box" class="box">
         <ol class="count row">
@@ -47,8 +47,8 @@
         <input type="button" value="START" id="btn" class="btn" />
     </div>
 </body>
-<script type="text/javascript" >
-	function rnd(n, m) {
+<script type="text/javascript">
+function rnd(n, m) {
     return parseInt(Math.random() * (m - n) + n);
 }
 window.onload = function() {
@@ -162,8 +162,13 @@ window.onload = function() {
         box1.keyDrive(event.keyCode);
         console.log(event.keyCode)
     })
+    var tip = document.getElementById("tip")
+    tip.addEventListener("click", function(target) {
+        if (target.target.nodeName == "H5") {
+            oTxt.value = target.target.innerText.split("：")[0];
+        }
+    })
 };
-
 </script>
 
 </html>

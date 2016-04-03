@@ -85,7 +85,12 @@
     transition: left 1s,right 1s,top 1s,bottom 1s,-webkit-transform 1s;
     -webkit-transition: left 1s,right 1s,top 1s,bottom 1s,-webkit-transform 1s; /* Safari */
 }
-
-.tip{
-    text-align: center;
+#tip{
+    margin-left: 20px;
+    float: left;
+}
+#tip h5{
+    margin-top: 20px;
+    cursor: pointer;
+    display: block;
 }
